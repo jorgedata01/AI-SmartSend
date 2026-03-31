@@ -1,0 +1,16 @@
+# Archivos privados 
+.device_id 
+.license 
+.trial_used 
+.envios_count 
+whatsapp_pro.py 
+activador.py 
+security.py 
+clientes_licencias.xlsx 
+contactos.xlsx 
+reporte_envios.xlsx 
+sesion_chrome/ 
+__pycache__/ 
+build/ 
+dist/ 
+*.log 

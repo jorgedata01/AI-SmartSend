@@ -1,0 +1,47 @@
+{
+  "_instrucciones": {
+    "grupos":   "Filtra contactos del Excel por columna 'grupo'. Usa 'todos' para enviar a todos.",
+    "tipo":     "diario | semanal | fechas_especificas",
+    "dias":     "Para semanal: monday, tuesday, wednesday, thursday, friday, saturday, sunday",
+    "fechas":   "Para fechas_especificas: lista en formato YYYY-MM-DD",
+    "hora":     "Formato HH:MM en 24h. Ej: 09:00, 14:30",
+    "variables":"Usa {nombre}, {fecha}, {hora}, {dia}, {mes} o cualquier columna de tu Excel"
+  },
+  "mensajes": [
+    {
+      "id":          "saludo_diario",
+      "descripcion": "Saludo matutino a clientes",
+      "grupos":      ["clientes"],
+      "texto":       "☀️ ¡Buenos días {nombre}! Hoy es {dia} {fecha}. ¡Que tengas un excelente día! 🙌",
+      "programacion": {
+        "tipo": "diario",
+        "hora": "09:00"
+      },
+      "activo": true
+    },
+    {
+      "id":          "recordatorio_equipo",
+      "descripcion": "Recordatorio semanal al equipo (lunes)",
+      "grupos":      ["equipo"],
+      "texto":       "📅 Hola {nombre}! Recuerda nuestra reunión mañana martes a las 10am. ¡Hasta pronto! 💪",
+      "programacion": {
+        "tipo": "semanal",
+        "dias": ["monday"],
+        "hora": "18:00"
+      },
+      "activo": true
+    },
+    {
+      "id":          "promo_fechas",
+      "descripcion": "Promoción en fechas especiales a todos",
+      "grupos":      ["todos"],
+      "texto":       "🎉 ¡Hola {nombre}! Hoy es {fecha} Y, estamos probando el Sistema automatizado de mensajes por WhatsApp. ¡Me avisas cómo lo recibes! 🚀",
+      "programacion": {
+        "tipo":   "fechas_especificas",
+        "fechas": ["2026-03-15", "2026-03-20", "2026-04-01"],
+        "hora":   "09:10"
+      },
+      "activo": true
+    }
+  ]
+}
